@@ -1,0 +1,16 @@
+# Netlify configuration for static site deployment
+# This file tells Netlify how to deploy your project
+
+[build]
+  # No build command needed - we're serving static files
+  command = ""
+
+  # Publish the root directory
+  publish = "."
+
+# Security headers for the deployed site
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"

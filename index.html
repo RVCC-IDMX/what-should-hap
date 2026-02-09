@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Should I Munch? - HAP's Coding Snack Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>What Should I Munch? 🟠</h1>
+        <p class="subtitle">Find the perfect coding snack for your session!</p>
+      </header>
+
+      <section class="preferences">
+        <h2>Tell me your preferences</h2>
+
+        <form id="preference-form">
+          <div class="form-group">
+            <label for="mood">What's your coding mood?</label>
+            <select id="mood" name="mood">
+              <option value="">Any mood</option>
+              <option value="focused">Focused (deep work)</option>
+              <option value="relaxed">Relaxed (casual coding)</option>
+              <option value="energized">Energized (need a boost!)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="time">How much prep time do you have?</label>
+            <select id="time" name="time">
+              <option value="">Any amount</option>
+              <option value="0">Zero - ready to eat!</option>
+              <option value="2">A couple minutes</option>
+              <option value="5">Up to 5 minutes</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="category">Snack type preference?</label>
+            <select id="category" name="category">
+              <option value="">Any type</option>
+              <option value="fruit">Fruit 🍎</option>
+              <option value="vegetable">Vegetables 🥕</option>
+              <option value="dairy">Dairy 🧀</option>
+              <option value="nuts">Nuts 🥜</option>
+              <option value="grain">Grains 🍿</option>
+              <option value="sweet">Sweets 🍫</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mess-level">Keyboard safety level?</label>
+            <select id="mess-level" name="mess-level">
+              <option value="">Any mess level</option>
+              <option value="1">Pristine (no crumbs!)</option>
+              <option value="2">Moderate (some care needed)</option>
+              <option value="3">Messy (worth the risk)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary">Find My Snack!</button>
+        </form>
+      </section>
+
+      <section class="results" id="results">
+        <h2>Snack Recommendations</h2>
+        <div id="recommendation-list" class="recommendation-list">
+          <p class="placeholder">
+            Pick your preferences and click "Find My Snack!" to see what I recommend. 🟠
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts loaded in order: data first, then matching functions, then app -->
+    <script src="data.js"></script>
+    <script src="matching.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
